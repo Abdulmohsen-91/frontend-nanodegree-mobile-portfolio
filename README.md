@@ -30,11 +30,31 @@ Some useful tips to help you get started:
 
 Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
+## Outcome:
+
+Optimizations made as below:
+
+1. First PageSpeed was 88/100 for Desktop and 56/100 for Mobile.
+2. First optimization is for both style.css and perfmatters.js files, optimized by Google's PageSpeed tool.
+3. Reduce the size if pizzeria.jpg image by the tool ImageOptim , then change the dimensions of the image because 100px is enough for the index.html page. New image is pizzeria_optimized.jpg.
+4. Added media = “print” to print.css, and async to analytics.js.
+5. Having the style.css inlined in index.html file.
+6. Moving Google analytics and google fonts to the end of the body tag.
+7. Final PageSpeed is 95/100 for Desktop and 97/100 for Mobile
+
 #### Part 2: Optimize Frames per Second in pizza.html
 
 To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
+
+## Outcome:
+
+Optimizations made as below:
+
+1. Edited the function `updatePositions` to aviod initiating the variable repeatedly and stopped the iteration of calling the DOM.
+2. Edited the function `changePizzaSizes` to aviod repeqted access to the DOM by moving the querySelectorAll outside the for loop
+3. Aviod accessing the DOM in some for loop by moving out any document.ANYTHING().
 
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
