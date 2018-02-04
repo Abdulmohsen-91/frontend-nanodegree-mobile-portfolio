@@ -511,7 +511,7 @@ function updatePositions() {
     // document.body.scrollTop is no longer supported in Chrome.
       // aviod intiating the variable again and again and also calling the DOM too much 
     //var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    var phase = Math.sin((document.documentElement.scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
