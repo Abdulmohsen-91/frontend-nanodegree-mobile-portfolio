@@ -55,7 +55,9 @@ Optimizations made as below:
 1. Edited the function `updatePositions` to aviod initiating the variable repeatedly and stopped the iteration of calling the DOM.
 2. Edited the function `changePizzaSizes` to aviod repeqted access to the DOM by moving the querySelectorAll outside the for loop
 3. Aviod accessing the DOM in some for loop by moving out any document.ANYTHING().
-4. in the function `resizePizzas` , replace document.querySelector() with faster and more efficient Web API call which is document.getElementById().
+4. In the function `resizePizzas` , replace document.querySelector() with faster and more efficient Web API call which is document.getElementById().
+5. Aviod using querySelectorAll(), and replaced it with getElementsByClassName() in the function `changePizzaSizes`.
+6. In the function `updatePositions` , moving initiating document.documentElement.scrollTop out of the loop.
 
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
